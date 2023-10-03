@@ -1,0 +1,397 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta name="Description" content="Profile Page" />
+    <title>Profile Page</title>
+    <link
+      href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css"
+      rel="stylesheet"
+      integrity="sha384-T3c6CoIi6uLrA9TneNEoa7RxnatzjcDSCmG1MXxSR1GAsXEV/Dwwykc2MPK8M2HN"
+      crossorigin="anonymous"
+    />
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.2/css/all.min.css"
+      integrity="sha512-z3gLpd7yknf1YoNbCzqRKc4qyor8gaKU1qmn+CShxbuBusANI9QpRohGBreCFkKxLhei6S9CQXFEbbKuqLg0DA=="
+      crossorigin="anonymous"
+      referrerpolicy="no-referrer"
+    />
+    <!-- Custom styles for this template -->
+    <link href="headers.css" rel="stylesheet" />
+  </head>
+  <style>
+    .bd-placeholder-img {
+      font-size: 1.125rem;
+      text-anchor: middle;
+      -webkit-user-select: none;
+      -moz-user-select: none;
+      user-select: none;
+    }
+
+    @media (min-width: 768px) {
+      .bd-placeholder-img-lg {
+        font-size: 3.5rem;
+      }
+    }
+    header,
+    footer {
+      background-color: rgba(243, 28, 28, 0.836);
+    }
+    .card:hover {
+      box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.5);
+    }
+    /*.card-content {
+      display: none;
+    }*/
+    .modal {
+      display: none;
+      position: fixed;
+      top: 0;
+      left: 0;
+      width: 100%;
+      height: 100%;
+      background-color: rgba(0, 0, 0, 0.7);
+      z-index: 1;
+      overflow: auto;
+    }
+
+    .modal-content {
+      background-color: #fff;
+      margin: 10% auto;
+      padding: 20px;
+      width: 80%;
+      box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2);
+      position: relative;
+    }
+    .close {
+      position: absolute;
+      top: 10px;
+      right: 10px;
+      font-size: 24px;
+      cursor: pointer;
+    }
+  </style>
+
+  <body>
+    <header class="p-3 mb-3 border-bottom">
+      <div class="container">
+        <div
+          class="d-flex flex-wrap align-items-center justify-content-between justify-content-lg-between"
+        >
+          <span class="display-6 text-white me-lg-3">Daizy_blog</span>
+          <span class="text-white display-6"
+            ><a href="./profile.js"
+              ><i class="fa-solid fa-plus text-white"></i></a
+          ></span>
+
+          <form class="col-12 col-lg-auto mb-3 mb-lg-0 me-lg-3">
+            <input
+              type="search"
+              class="form-control"
+              placeholder="Search..."
+              aria-label="Search"
+            />
+          </form>
+
+          <div class="dropdown text-end">
+            <a
+              href="#"
+              class="d-block link-dark text-decoration-none dropdown-toggle"
+              id="dropdownUser1"
+              data-bs-toggle="dropdown"
+              aria-expanded="false"
+            >
+              <img
+                src="https://github.com/mdo.png"
+                alt="mdo"
+                width="32"
+                height="32"
+                class="rounded-circle"
+              />
+            </a>
+            <ul
+              class="dropdown-menu text-small"
+              aria-labelledby="dropdownUser1"
+            >
+              <li><a class="dropdown-item" href="#">Profile</a></li>
+              <li><hr class="dropdown-divider" /></li>
+              <li><a class="dropdown-item" href="#">Sign out</a></li>
+            </ul>
+          </div>
+        </div>
+      </div>
+    </header>
+    <!--cards section-->
+
+    <div class="album py-5 bg-light">
+      <div class="container">
+        <div class="row row-cols-1 row-cols-sm-2 row-cols-md-3 g-3">
+          <div class="col">
+            <div class="card">
+              <img
+                src="./Images/smoothiesVsJuices.png"
+                alt=""
+                width="100%"
+                height="225"
+              />
+
+              <div class="card-body">
+                <p class="card-text fs-2 fw-bold" id="card-1">
+                  Smoothies Vs. Juices: Which is healthier?
+                </p>
+                <p class="card-content">
+                  However, smoothies come out on top in terms of nutrients and
+                  fiber for weight loss and digestion. Whichever option you
+                  decide to try, balance the amount of fruits and vegetables you
+                  add to maximize nutrient intake. Stephanie Urrutia is a
+                  registered dietitian at The Ohio State University Wexner
+                  Medical Center.
+                </p>
+                <div class="d-flex justify-content-between align-items-center">
+                  <div class="btn-group">
+                    <button
+                      type="button"
+                      class="btn btn-sm btn-outline-secondary view-btn"
+                      id="view-btn1"
+                    >
+                      View
+                    </button>
+                    <button
+                      type="button"
+                      class="btn btn-sm btn-outline-secondary"
+                    >
+                      Edit
+                    </button>
+                    <button
+                      type="button"
+                      class="btn btn-sm btn-outline-secondary"
+                    >
+                      Delete
+                    </button>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+          <div class="col">
+            <div class="card">
+              <img
+                src="./Images/sugarAndCancer.png"
+                alt=""
+                width="100%"
+                height="225"
+              />
+
+              <div class="card-body">
+                <p class="card-text fs-2 fw-bold" id="card-2">
+                  Sugar and Cancer Risk
+                </p>
+                <p class="card-content">
+                  Sugar is not a carcinogenic (cancer-causing) substance.
+                  However, over-consumption of sugar, particularly added sugars
+                  in processed beverages and foods, can contribute to obesity
+                  which is an important risk factor for cancer. There is no
+                  evidence that consuming sugar makes cancer cells grow faster
+                  or cause cancer.
+                </p>
+                <div class="d-flex justify-content-between align-items-center">
+                  <div class="btn-group">
+                    <button
+                      type="button"
+                      class="btn btn-sm btn-outline-secondary"
+                      id="view-btn2"
+                    >
+                      View
+                    </button>
+                    <button
+                      type="button"
+                      class="btn btn-sm btn-outline-secondary view-btn"
+                    >
+                      Edit
+                    </button>
+                    <button
+                      type="button"
+                      class="btn btn-sm btn-outline-secondary"
+                    >
+                      Delete
+                    </button>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+          <div class="col">
+            <div class="card">
+              <img
+                src="./Images/BenefitsOfSoy.png"
+                alt=""
+                width="100%"
+                height="225"
+              />
+
+              <div class="card-body">
+                <p class="card-text fs-2 fw-bold" id="card-3">
+                  Health Benefits of Soy
+                </p>
+                <p class="card-content">
+                  It can be hard to eat enough of this important fuel for your
+                  body if you’re vegetarian or vegan, especially if you’re an
+                  athlete or very active. Soybean, also called soya bean, can
+                  help. Unlike most plant protein, soy has all nine essential
+                  amino acids you need for healthy muscles and bone.
+                </p>
+                <div class="d-flex justify-content-between align-items-center">
+                  <div class="btn-group">
+                    <button
+                      type="button"
+                      class="btn btn-sm btn-outline-secondary view-btn"
+                      id="view-btn3"
+                    >
+                      View
+                    </button>
+                    <button
+                      type="button"
+                      class="btn btn-sm btn-outline-secondary"
+                    >
+                      Edit
+                    </button>
+                    <button
+                      type="button"
+                      class="btn btn-sm btn-outline-secondary"
+                    >
+                      Delete
+                    </button>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+
+          <div class="col">
+            <div class="card">
+              <img
+                src="./Images/Workout.jpg"
+                alt=""
+                width="100%"
+                height="225"
+              />
+
+              <div class="card-body">
+                <p class="card-text fs-2 fw-bold" id="card-4">
+                  4-minute Immune Boosting Workout
+                </p>
+                <p class="card-content">
+                  Walking. A short walk about the same length as your lunch
+                  break is enough to keep your immunity functioning like it
+                  should. One study tracked 1,000 adults during flu season, and
+                  those who walked for 30 to 45 minutes a day had 43 percent
+                  less sick days than those who didn't.
+                </p>
+                <div class="d-flex justify-content-between align-items-center">
+                  <div class="btn-group">
+                    <button
+                      type="button"
+                      class="btn btn-sm btn-outline-secondary view-btn"
+                      id="view-btn4"
+                    >
+                      View
+                    </button>
+                    <button
+                      type="button"
+                      class="btn btn-sm btn-outline-secondary"
+                    >
+                      Edit
+                    </button>
+                    <button
+                      type="button"
+                      class="btn btn-sm btn-outline-secondary"
+                    >
+                      Delete
+                    </button>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <div id="myModal1" class="modal">
+      <div class="modal-content">
+        <span class="close">&times;</span>
+        <h2 id="modal-title">Smoothies Vs. Juices: Which is healthier?</h2>
+        <p id="modal-content">
+          However, smoothies come out on top in terms of nutrients and fiber for
+          weight loss and digestion. Whichever option you decide to try, balance
+          the amount of fruits and vegetables you add to maximize nutrient
+          intake. Stephanie Urrutia is a registered dietitian at The Ohio State
+          University Wexner Medical Center..
+        </p>
+      </div>
+    </div>
+
+    <div id="myModal2" class="modal">
+      <div class="modal-content">
+        <span class="close">&times;</span>
+        <h2 id="modal-title">Sugar and Cnacer Risk</h2>
+        <p id="modal-content">
+          Sugar is not a carcinogenic (cancer-causing) substance. However,
+          over-consumption of sugar, particularly added sugars in processed
+          beverages and foods, can contribute to obesity which is an important
+          risk factor for cancer. There is no evidence that consuming sugar
+          makes cancer cells grow faster or cause cancer.
+        </p>
+      </div>
+    </div>
+
+    <div id="myModal3" class="modal">
+      <div class="modal-content">
+        <span class="close">&times;</span>
+        <h2 id="modal-title">Health Benefits of Soy</h2>
+        <p id="modal-content">
+          It can be hard to eat enough of this important fuel for your body if
+          you’re vegetarian or vegan, especially if you’re an athlete or very
+          active. Soybean, also called soya bean, can help. Unlike most plant
+          protein, soy has all nine essential amino acids you need for healthy
+          muscles and bone.
+        </p>
+      </div>
+    </div>
+
+    <div id="myModal4" class="modal">
+      <div class="modal-content">
+        <span class="close">&times;</span>
+        <h2 id="modal-title">4-minute Immune Boosting Workout</h2>
+        <p id="modal-content">
+          Walking. A short walk about the same length as your lunch break is
+          enough to keep your immunity functioning like it should. One study
+          tracked 1,000 adults during flu season, and those who walked for 30 to
+          45 minutes a day had 43 percent less sick days than those who didn't.
+        </p>
+      </div>
+    </div>
+
+    <footer class="py-3">
+      <div class="container">
+        <p class="float-end mb-4">
+          <a href="#" class="text-white">Back to top</a>
+        </p>
+        <p class="mb-0 text-white">
+          &copy 2023 All Rights Reserved. This template is made by
+          <span class="fw-bold">Beulah Daizy</span>
+        </p>
+      </div>
+    </footer>
+    <script
+      src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/js/bootstrap.bundle.min.js"
+      integrity="sha384-MrcW6ZMFYlzcLA8Nl+NtUVF0sA7MsXsP1UyJoMp4YLEuNSfAP+JcXn/tWtIaxVXM"
+      crossorigin="anonymous"
+    ></script>
+
+    <script src="./profile.js" type="module"></script>
+  </body>
+</html>

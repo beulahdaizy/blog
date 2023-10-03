@@ -1,0 +1,72 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta name="Description" content="Blog" />
+    <title>Blog Application</title>
+    <link
+      href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css"
+      rel="stylesheet"
+      integrity="sha384-EVSTQN3/azprG1Anm3QDgpJLIm9Nao0Yz1ztcQTwFspd3yD65VohhpuuCOmLASjC"
+      crossorigin="anonymous"
+    />
+  </head>
+  <style>
+    body{
+        background-color:rgba(243, 28, 28, 0.836);
+    }
+    form h1{
+        color:white;
+    }
+    .title{
+        color:rgb(19, 235, 12);
+    }
+  </style>
+ 
+  <body> 
+   <div class="text-center container-fluid" id="container"> 
+    <h3 class="display-5 text-center title fw-bold">Health and Fitness Blog</h3>
+    <main class="w-50 m-auto">
+        <form action="#">
+          <img class="mb-2" src="./Images/Health-Fitness-image.jpg" alt="" width="400" height="200">
+          <h1 class="h3 mb-3 fw-normal">Feel More Fit</h1>
+          <h1 class="h3 mb-3 fw-normal">Please sign in</h1>
+      
+          <div class="form-floating mb-3">
+            <input type="email" class="form-control" id="floatingInput" placeholder="name@example.com">
+            <label for="floatingInput">Email address</label>
+          </div>
+          <div class="form-floating mb-3">
+            <input type="password" class="form-control" id="floatingPassword" placeholder="Password">
+            <label for="floatingPassword">Password</label>
+          </div>
+          <button class="w-100 btn btn-lg btn-primary" type="submit" id="signin-btn">Sign in</button>
+          <input
+            type="reset"
+            class="w-100 btn btn-lg btn-success mt-3"
+            value="Clear"
+          />
+          <!--<button type="button" class="w-100 btn btn-lg btn-secondary mt-3"> -->
+            <a
+              href="./registration.html"
+              class="text-white text-decoration-none"
+              >Not yet registered? <u>Click here</u></a
+            >
+          <!--</button> -->
+          <p class="mt-5 mb-3 text-white">&copy; 2023–2024</p>
+        </form>
+      </main>
+   </div>
+</body>
+    <script
+      src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/js/bootstrap.bundle.min.js"
+      integrity="sha384-MrcW6ZMFYlzcLA8Nl+NtUVF0sA7MsXsP1UyJoMp4YLEuNSfAP+JcXn/tWtIaxVXM"
+      crossorigin="anonymous"
+    ></script>
+    
+   <!--<script src="./signin.js" type="module"></script>--> 
+  </body>
+</html>
+
